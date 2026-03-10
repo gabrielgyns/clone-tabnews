@@ -12,8 +12,6 @@
 	},
 	"license": "MIT",
 	"author": "",
-	"type": "module",
-	"main": "index.js",
 	"scripts": {
 		"dev": "next dev",
 		"lint:check": "prettier --check .",
@@ -27,7 +25,11 @@
 		"react-dom": "18.3.1"
 	},
 	"devDependencies": {
+		"@types/node": "^25.4.0",
+		"@types/react": "^19.2.14",
+		"@types/react-dom": "^19.2.3",
 		"jest": "^30.3.0",
-		"prettier": "^3.6.2"
+		"prettier": "^3.6.2",
+		"typescript": "^5.9.3"
 	}
 }
