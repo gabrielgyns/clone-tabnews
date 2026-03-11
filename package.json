@@ -14,19 +14,24 @@
 	"author": "",
 	"scripts": {
 		"dev": "next dev",
+		"docker": "docker compose -f infra/compose.yaml up -d --force-recreate",
 		"lint:check": "prettier --check .",
 		"lint:fix": "prettier --write .",
 		"test": "jest",
-		"test:watch": "jest --watch"
+		"test:watch": "jest --watchAll"
 	},
 	"dependencies": {
 		"next": "14.2.5",
+		"pg": "^8.11.3",
 		"react": "18.3.1",
 		"react-dom": "18.3.1"
 	},
 	"devDependencies": {
+		"@swc/core": "^1.15.18",
+		"@swc/jest": "^0.2.39",
 		"@types/jest": "^30.0.0",
 		"@types/node": "^25.4.0",
+		"@types/pg": "^8.18.0",
 		"@types/react": "^19.2.14",
 		"@types/react-dom": "^19.2.3",
 		"jest": "^30.3.0",
