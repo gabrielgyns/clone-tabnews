@@ -1,4 +1,4 @@
-import database from "../../../../../infra/databse";
+import database from "infra/databse";
 
 test("GET to /api/v1/status should return 200", async () => {
     const result = await database.query("SELECT 1 + 1 as sum");

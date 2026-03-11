@@ -9,23 +9,7 @@ const createJestConfig = nextJest({
 
 const config: Config = {
     testEnvironment: "node",
-    transform: {
-        "^.+\\.(t|j)sx?$": [
-            "@swc/jest",
-            {
-                jsc: {
-                    parser: {
-                        syntax: "typescript",
-                        tsx: true,
-                    },
-                    target: "es2022",
-                },
-                module: {
-                    type: "commonjs",
-                },
-            },
-        ],
-    },
+    moduleDirectories: ["node_modules", "<rootDir>"],
 };
 
 export default createJestConfig(config)
