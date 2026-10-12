@@ -9,7 +9,7 @@ async function query(
     user: process.env.POSTGRES_USER,
     database: process.env.POSTGRES_DB,
     password: process.env.POSTGRES_PASSWORD,
-    ssl: true,
+    ssl: process.env.NODE_ENV !== "development",
   });
 
   try {
