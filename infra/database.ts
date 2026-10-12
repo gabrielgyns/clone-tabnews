@@ -9,7 +9,7 @@ async function query(
     user: process.env.POSTGRES_USER,
     database: process.env.POSTGRES_DB,
     password: process.env.POSTGRES_PASSWORD,
-    ssl: process.env.NODE_ENV === "production",
+    ssl: process.env.NODE_ENV === "production", // CA -> SSL values https://github.com/filipedeschamps/clone-tabnews/commit/57ea2e5521526cdc55fa33d1cd5ad1cb19be5920
   });
 
   try {
